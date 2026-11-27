@@ -241,7 +241,7 @@ Replace `YOUR_MYSQL_PASSWORD` with your local MySQL password.
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+https://github.com/Omkarsarvankar18/Online-Reservation-System
 ```
 
 2. Open Eclipse IDE.
