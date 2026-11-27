@@ -255,10 +255,6 @@ The Login screen should appear.
 
 ## Application Screenshots
 
-Add your application screenshots inside the `screenshots` folder.
-
-Once added, update this section:
-
 ### Login Page
 
 ![Login Page](screenshots/login.png)
