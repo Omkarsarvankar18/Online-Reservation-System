@@ -1,0 +1,21 @@
+
+# Eclipse IDE
+.classpath
+.project
+.settings/
+
+# Maven build files
+target/
+
+# Database credentials - IMPORTANT
+src/main/resources/db.properties
+
+# Java compiled files
+*.class
+
+# Log files
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,39 @@
+
+package config;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Properties;
+import java.io.InputStream;
+import java.io.IOException;
+
+public class DBConnection {
+
+    private static final Properties properties = new Properties();
+
+    static {
+        try (InputStream input = DBConnection.class
+                .getClassLoader()
+                .getResourceAsStream("db.properties")) {
+
+            if (input == null) {
+                throw new RuntimeException("db.properties file not found!");
+            }
+
+            properties.load(input);
+
+        } catch (IOException e) {
+            throw new RuntimeException("Unable to load database configuration", e);
+        }
+    }
+
+    public static Connection getConnection() throws SQLException {
+
+        String url = properties.getProperty("db.url");
+        String username = properties.getProperty("db.username");
+        String password = properties.getProperty("db.password");
+
+        return DriverManager.getConnection(url, username, password);
+    }
+}
